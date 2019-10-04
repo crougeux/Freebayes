@@ -1,5 +1,5 @@
 ## Freebayes
-Small pipeline for SNP calling from `.bam` files, without any optimization here.
+Small pipeline for SNP calling from `.bam` files using Freebayes, without any optimization here.
 
 ## Dependencies
 [Java](https://www.java.com/en/)
