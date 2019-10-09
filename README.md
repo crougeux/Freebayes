@@ -23,3 +23,7 @@ Then, EDIT properly the scripts to fit your working environment and your data.
 These scripts were developed for particular servers. 
 Use at your own risk...killing!
 Keep in mind that some modifications will be required for some circumstancies.
+
+
+------
+Thanks to Michael and Russel for pointing out an error!
