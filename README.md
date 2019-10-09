@@ -26,4 +26,4 @@ Keep in mind that some modifications will be required for some circumstancies.
 
 
 ------
-Thanks to Michael and Russel for pointing out an error!
+Thanks to Michael Williamson and Russel J. Jasper for pointing out an error!
