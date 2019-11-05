@@ -44,7 +44,7 @@ echo "Filtering the raw full VCF...can take some time..."
 vcftools --gzvcf $RAWVCF \
     --genotype-qualities \
     --minGQ 20 \
-    --min-meanDP 5 \
+    --minDP 5 \
     --mac 10 \
     --recode \
     --stdout | gzip -c > $FILTVCF 
