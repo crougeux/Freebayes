@@ -31,5 +31,6 @@ VCFP="03_raw_VCFs"
 
 # SNP calling - Genotype diploid Parent
 time freebayes -f "$REF" \
+    --genotype-qualities \
     -p "$PLDP" \
     "$BAM"/LP_mg0P1_rd.bam > "$VCFP"/LP_P1_rd_RAW.vcf

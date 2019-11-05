@@ -42,7 +42,6 @@ done
 # Filtering the merged vcf file - Quality (QG>20) . depth (>5) . SNP called in > 10 ind
 echo "Filtering the raw full VCF...can take some time..."
 vcftools --gzvcf $RAWVCF \
-    --genotype-qualities \
     --minGQ 20 \
     --minDP 5 \
     --mac 10 \

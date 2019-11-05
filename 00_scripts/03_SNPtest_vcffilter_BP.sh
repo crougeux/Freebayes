@@ -24,7 +24,7 @@ BPVCF="04_filtered_VCFs/"
 
 
 vcffilter -s -f "TYPE = snp & QUAL > 30" \
-    -g "GQ > 20" "$FILTVCF" \
+    -g "GQ > 20" "$FILTVCF" \ #Making sure (filter overlapping with VCFtools for basic filters)
     "AB > 0.25 & AB < 0.75 | AB < 0.01" \ #Test for allelic imbalance (not supposed in our data)
     | vcfallelicprimitives \
     | vcfbiallelic \

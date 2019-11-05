@@ -35,5 +35,6 @@ time freebayes -f "$REF" \
 	--populations "$POP" \
 	-p "$PLD" \
 	-L "$BAM" \
+	--genotype-qualities \
 	--min-alternate-fraction 0.1 > "$VCF"/LP_POPlist_freebayes_RAW.vcf
 
