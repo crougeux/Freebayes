@@ -7,7 +7,7 @@ Small pipeline for SNP calling from `.bam` files, without any optimization here.
 [Samtools]()https://github.com/samtools/samtools
 [tabix](https://www.htslib.org/doc/tabix.html)
 [vcftools](http://vcftools.sourceforge.net)
-See also [Freebayes](https://github.com/ekg/freebayes) requirements.. 
+See also requirements from [Freebayes](https://github.com/ekg/freebayes) and vcffliter from [vcflib](https://github.com/vcflib/vcflib) library... 
 
 ## Usage
 Put your genomic reference as well as your `.bam` data in the corresponding directories.

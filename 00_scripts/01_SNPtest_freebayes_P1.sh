@@ -26,7 +26,7 @@ cp "$SCRIPT" "$LOG_FOLDER"/"$TIMESTAMP"_"$NAME"
 # Variables
 REF="01_reference"
 BAM="02_bam_files"
-PLDP=""						# Ploidy Parents
+PLDP="2"						# Ploidy Parents
 VCFP="03_raw_VCFs"						
 
 # SNP calling - Genotype diploid Parent

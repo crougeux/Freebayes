@@ -6,9 +6,6 @@
 #SBATCH --mail-user=
 #SBATCH --time=12-00:00
 #SBATCH --mem=20G
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
 
 module load nixpkgs/16.09
 module load gcc/7.3.0
@@ -29,7 +26,7 @@ REF="01_reference"
 IREF="01_reference"
 BAM="02_bam_files"
 POP=""							# See Freebayes requirements for population map
-PLD=""							# Ploidy level
+PLD="1 "							# Ploidy level
 VCF="03_raw_VCFs"
 
 

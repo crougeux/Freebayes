@@ -6,9 +6,7 @@
 #SBATCH --mail-user=
 #SBATCH --time=2-00:00
 #SBATCH --mem=2G
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
+
 
 module load tabix/0.2.6
 module load vcftools
@@ -44,6 +42,7 @@ done
 # Filtering the merged vcf file - Quality (QG>20) . depth (>5) . SNP called in > 10 ind
 echo "Filtering the raw full VCF...can take some time..."
 vcftools --gzvcf $RAWVCF \
+    --genotype-qualities \
     --minGQ 20 \
     --min-meanDP 5 \
     --mac 10 \
