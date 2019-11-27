@@ -24,13 +24,19 @@ cp "$SCRIPT" "$LOG_FOLDER"/"$TIMESTAMP"_"$NAME"
 
 
 # Variables
-REF="01_reference"
-BAM="02_bam_files"
+REF="02_reference"
+BAM="03_bam_files"
 PLDP="2"						# Ploidy Parents
-VCFP="03_raw_VCFs"						
+VCFP="04_raw_VCFs"						
 
 # SNP calling - Genotype diploid Parent
+echo "
+Calling SNPs in diploid parent...
+"
+
 time freebayes -f "$REF" \
     --genotype-qualities \
     -p "$PLDP" \
     "$BAM"/LP_mg0P1_rd.bam > "$VCFP"/LP_P1_rd_RAW.vcf
+
+echo "DONE! Check your files"

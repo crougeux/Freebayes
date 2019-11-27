@@ -22,15 +22,19 @@ echo "$SCRIPT"
 cp "$SCRIPT" "$LOG_FOLDER"/"$TIMESTAMP"_"$NAME"
 
 # Variables
-REF="01_reference"
-IREF="01_reference"
-BAM="02_bam_files"
+REF="02_reference"
+IREF="02_reference"
+BAM="03_bam_files"
 POP=""							# See Freebayes requirements for population map
 PLD="1 "							# Ploidy level
-VCF="03_raw_VCFs"
+VCF="04_raw_VCFs"
 
 
 # SNP calling - Genotype haploid Offspring 
+echo "
+Calling SNPs in haploid F1s...
+"
+
 time freebayes -f "$REF" \
 	--populations "$POP" \
 	-p "$PLD" \
@@ -38,3 +42,4 @@ time freebayes -f "$REF" \
 	--genotype-qualities \
 	--min-alternate-fraction 0.1 > "$VCF"/LP_POPlist_freebayes_RAW.vcf
 
+echo "DONE! Check your files"

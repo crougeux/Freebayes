@@ -11,8 +11,8 @@
 #SBATCH --cpus-per-task=1
 
 # Global variables
-INBAM="02_bam_files"
-OUTBAM="02_bam_files"
+INBAM="03_bam_files"
+OUTBAM="03_bam_files"
 
 cd $SLURM_SUBMIT_DIR
 
@@ -29,6 +29,10 @@ module load java/1.8.0_192
 module load picard/2.20.6
 
 # Remove duplicates from bam alignments
+echo "
+Removing duplicates...
+"
+
 ls -1 "$INBAM"/*_rd.bam |
     while read file
     do
@@ -42,3 +46,5 @@ ls -1 "$INBAM"/*_rd.bam |
 	    RGPU=unit1 \
 	    RGSM=$(basename "$file" _rd.bam)
 done
+
+echo "DONE! Check your files"
